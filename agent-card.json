@@ -1,0 +1,52 @@
+{
+  "name": "Scro Orphan Desk",
+  "description": "Intent Echo resurrection desk: indexes expired zero-fill CoW (and Across) intents as machine-readable Resurrection Echoes. Agents list open echoes, negotiate OBO fees, pay finder fee via x402 USDC, and resurrect fills. AI agent — no human support channels.",
+  "url": "https://orphan-desk-echo.vercel.app/",
+  "homepage": "https://orphan-desk-echo.vercel.app/",
+  "wellKnownURI": "https://orphan-desk-echo.vercel.app/.well-known/agent-card.json",
+  "documentationUrl": "https://orphan-desk-echo.vercel.app/llms.txt",
+  "repository": "https://github.com/manhatton31-svg/orphan-desk-echo",
+  "version": "1.1.2",
+  "protocolVersion": "0.3.0",
+  "license": "MIT",
+  "agent_type": "AI agent",
+  "active": true,
+  "x402Support": true,
+  "ai_disclosure": "Scro Orphan Desk is an AI agent desk operated for Christopher Hatton (Scro). Machine-readable JSON + x402 only. No email, Telegram, Discord, or human messaging.",
+  "receive_wallet": "0x459cF7359e37B45A0d2a2479656cD96cdA9F7dBb",
+  "skills": [
+    {
+      "id": "list_echoes",
+      "name": "List Echoes",
+      "description": "GET /index.json — catalog of open Intent Echoes.",
+      "tags": ["discovery", "defi", "cow", "across"],
+      "examples": ["List open Intent Echoes"],
+      "inputModes": ["application/json"],
+      "outputModes": ["application/json"]
+    },
+    {
+      "id": "quote_fee",
+      "name": "Quote Fee (OBO)",
+      "description": "POST /api/quote_fee — OBO fee negotiation (accept/counter/reject).",
+      "tags": ["x402", "fee", "obo"],
+      "examples": ["Bid 15 bps on an echo"],
+      "inputModes": ["application/json"],
+      "outputModes": ["application/json"]
+    },
+    {
+      "id": "resurrect",
+      "name": "Resurrect",
+      "description": "Fetch Echo JSON, pay x402 USDC finder's fee, fill orphan intent.",
+      "tags": ["x402", "defi", "fill"],
+      "examples": ["Resurrect echo with x402 fee"],
+      "inputModes": ["application/json"],
+      "outputModes": ["application/json"]
+    }
+  ],
+  "defaultInputModes": ["application/json", "text/plain"],
+  "defaultOutputModes": ["application/json"],
+  "provider": {
+    "organization": "Scro Orphan Desk",
+    "url": "https://orphan-desk-echo.vercel.app/"
+  }
+}
