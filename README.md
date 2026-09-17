@@ -1,2 +1,1 @@
-# orphan-desk-echo
-Scro Orphan Desk — Intent Echo resurrection feed (machine-only, x402 fees)
+Scro Orphan Desk live feed: https://orphan-desk-echo.vercel.app — agent-card at repo root for A2A Registry Personal/GitHub publish.
