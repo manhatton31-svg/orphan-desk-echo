@@ -3,11 +3,10 @@
 **Live SoT:** https://dualregistry.dev  
 **Dedicated mirror repo:** https://github.com/manhatton31-svg/orphan-desk-echo
 
-## Latest bulk sync attempt (2026-09-17)
-- Catalog meta pushed via MCP (`MIRROR.json`, `MIRROR_SYNC_NOTE.md`, `stats.json` stub)
-- Full open-echo bulk sync: gh PAT lacks Contents:Write on this repo (REST/GraphQL 403); MCP `push_files` works — remaining open echoes + `index.json`/`agent-card.json` should be pushed via MCP in follow-up chunks
-- Open echo count at sync time: **15**
-- Live SoT remains https://dualregistry.dev
+## Sync result (2026-09-17)
+- Meta synced via GitHub MCP `push_files`: README, SPOTLIGHT, MIRROR.json, MIRROR_SYNC_NOTE, robots.txt, stats stub
+- **Open echoes (15):** prepared on box under `/workspace/orphan-desk-echo-mirror/echoes/`; gh fine-grained PAT returns Contents:Write 403 for blob/contents API — full echo JSON upload must continue via MCP `push_files` chunks (or grant Contents:Write on the PAT)
+- Prefer dedicated `orphan-desk-echo` repo (done) over stigmergic path
 
 ## Operator rule
-Crawlers must treat live `/index.json` as authoritative.
+Crawlers must treat live `/index.json` as authoritative; GitHub may lag.
